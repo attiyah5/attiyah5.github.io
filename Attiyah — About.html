@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>About — Attiyah</title>
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    color-scheme: light;
+    --purple: #410f70;
+    --purple-dark: #220b4e;
+    --tint-1: #dbc8ff;
+    --tint-2: #b691ff;
+    --white: #ffffff;
+    --bg: var(--white);
+    --ink: #1c1a20;
+    --text: var(--ink);
+    --text-muted: #62606b;
+    --border: #e3e2e6;
+    --serif: "Lora", Georgia, serif;
+    --sans: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
+  *, *::before, *::after { box-sizing: inherit; }
+  :root[data-theme="dark"] {
+    --bg: #17151b;
+    --text: #ede9f2;
+    --text-muted: #9a97a3;
+    --border: #322f3a;
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--purple); }
+  :focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; }
+
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 0 32px; }
+
+  /* Nav */
+  nav {
+    position: sticky; top: env(safe-area-inset-top, 0px);
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    z-index: 10;
+  }
+  nav .wrap { display: flex; justify-content: space-between; align-items: center; height: 64px; }
+  .wordmark { font-family: var(--serif); font-size: 18px; font-weight: 500; color: var(--purple); text-decoration: none; }
+  .navlinks { display: flex; gap: 28px; align-items: center; list-style: none; margin: 0; padding: 0; }
+  .navlinks a { text-decoration: none; color: var(--text-muted); font-size: 15px; }
+  .navlinks a:hover { color: var(--purple); }
+  .navlinks a.current { color: var(--purple); }
+
+  /* Hero */
+  .hero { padding: 96px 0 80px; text-align: center; background: var(--purple); }
+  .hero .greeting {
+    font-family: var(--sans);
+    font-size: 17px;
+    font-weight: 400;
+    color: rgba(255,255,255,0.75);
+    margin: 0 0 20px;
+  }
+  .hero h1 {
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(24px, 3vw, 34px);
+    line-height: 1.55;
+    max-width: 700px;
+    margin: 0 auto;
+    letter-spacing: -0.005em;
+    color: var(--white);
+  }
+
+  /* Section label */
+  .label {
+    font-size: 14px;
+    color: var(--text-muted);
+    margin: 0 0 12px;
+  }
+  section { padding: 64px 0; border-top: 1px solid var(--border); }
+
+  /* About body */
+  .about p {
+    max-width: 68ch;
+    font-size: 18px;
+    line-height: 1.75;
+    margin: 0 0 20px;
+  }
+
+  footer { padding: 64px 0 80px; border-top: 1px solid var(--border); }
+  footer .row { display: flex; gap: 28px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
+  footer a { color: var(--text); text-decoration: none; font-size: 16px; font-weight: 500; }
+  footer a:hover { color: var(--purple); }
+
+  @media (max-width: 640px) {
+    .wrap { padding: 0 20px; }
+    .hero { padding: 80px 0 64px; }
+    .navlinks { gap: 16px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="wordmark" href="index.html">Attiyah</a>
+    <ul class="navlinks">
+      <li><a href="index.html#work">Work</a></li>
+      <li><a class="current" href="about.html">About</a></li>
+      <li><a href="#" title="Add resume link here">Resume</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ============ HERO — opening quote, same visual system as homepage ============ -->
+<header class="hero">
+  <div class="wrap">
+    <h1>Each project starts the same way: what decision is someone actually making, and what happens if it's wrong?</h1>
+  </div>
+</header>
+
+<!-- ============ ABOUT BODY — heading below is a placeholder, swap for whichever option you like ============ -->
+<section class="about">
+  <div class="wrap">
+    <p class="label">How I think</p>
+    <p>My background spans microbiology and homesteading. One trained me in systems thinking, teaching me to ask why before how, and to find the root cause before designing the cure. The other taught me that environment shapes behavior, and that unpredictable conditions decide whether something works, not just the plan on paper.</p>
+    <p>Both show up in how I approach design. I look past the interface to the real-world conditions someone is actually deciding in: cooperative commerce, civic response, community health, and the constrained settings where a wrong decision costs the most.</p>
+    <p>I prioritize rigorous research with actual users, build for real organizations, and document how things actually work in practice.</p>
+    <p>Outside of work, I love reading classical non-fiction and baking.</p>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <p class="label">Let's talk</p>
+    <div class="row">
+      <a href="mailto:mayaah2019@gmail.com">mayaah2019@gmail.com</a>
+      <a href="#" title="Add LinkedIn URL here">LinkedIn</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
