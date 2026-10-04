@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>About — Attiyah</title>
 <meta name="color-scheme" content="light">
+<link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2222%22%20fill%3D%22%23410f70%22/%3E%3Ctext%20x%3D%2250%22%20y%3D%2270%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2258%22%20fill%3D%22%23ffffff%22%20text-anchor%3D%22middle%22%3EA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -40,7 +41,7 @@
     background: var(--bg);
     color: var(--text);
     font-family: var(--sans);
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
   }
@@ -60,19 +61,12 @@
   nav .wrap { display: flex; justify-content: space-between; align-items: center; height: 64px; }
   .wordmark { font-family: var(--serif); font-size: 18px; font-weight: 500; color: var(--purple); text-decoration: none; }
   .navlinks { display: flex; gap: 28px; align-items: center; list-style: none; margin: 0; padding: 0; }
-  .navlinks a { text-decoration: none; color: var(--text-muted); font-size: 15px; }
+  .navlinks a { text-decoration: none; color: var(--text-muted); font-size: 14px; }
   .navlinks a:hover { color: var(--purple); }
   .navlinks a.current { color: var(--purple); }
 
   /* Hero */
   .hero { padding: 96px 0 80px; text-align: center; background: var(--purple); }
-  .hero .greeting {
-    font-family: var(--sans);
-    font-size: 17px;
-    font-weight: 400;
-    color: rgba(255,255,255,0.75);
-    margin: 0 0 20px;
-  }
   .hero h1 {
     font-family: var(--serif);
     font-weight: 400;
@@ -101,9 +95,10 @@
   }
 
   footer { padding: 64px 0 80px; border-top: 1px solid var(--border); }
-  footer .row { display: flex; gap: 28px; flex-wrap: wrap; align-items: center; margin-bottom: 16px; }
-  footer a { color: var(--text); text-decoration: none; font-size: 16px; font-weight: 500; }
+  footer .row { display: flex; gap: 28px; flex-wrap: wrap; align-items: baseline; margin-bottom: 16px; }
+  footer a { color: var(--text-muted); text-decoration: none; font-size: 14px; }
   footer a:hover { color: var(--purple); }
+
 
   @media (max-width: 640px) {
     .wrap { padding: 0 20px; }
@@ -120,7 +115,7 @@
     <ul class="navlinks">
       <li><a href="index.html#work">Work</a></li>
       <li><a class="current" href="about.html">About</a></li>
-      <li><a href="#" title="Add resume link here">Resume</a></li>
+      <li><a href="#" title="Add resume link here" target="_blank" rel="noopener noreferrer">Resume</a></li>
     </ul>
   </div>
 </nav>
@@ -149,7 +144,7 @@
     <p class="label">Let's talk</p>
     <div class="row">
       <a href="mailto:mayaah2019@gmail.com">mayaah2019@gmail.com</a>
-      <a href="#" title="Add LinkedIn URL here">LinkedIn</a>
+      <a href="#" title="Add LinkedIn URL here" target="_blank" rel="noopener noreferrer">LinkedIn</a>
     </div>
   </div>
 </footer>
