@@ -222,8 +222,9 @@ blockquote cite{font-style:normal;font-size:14px;color:var(--text-muted)}
 .rail li[aria-current]::before{background:var(--purple)}
 .rail li.nx::before{background:repeating-linear-gradient(90deg,#cdb8ee 0 6px,transparent 6px 10px)}
 .nxrow{display:flex;justify-content:space-between;align-items:center;gap:24px}
-.nextcs a.back{display:inline-flex;align-items:center;min-height:44px;font-size:15px;font-weight:500;color:var(--ink);text-decoration:none}
+.nextcs a.back{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:15px;font-weight:500;color:var(--ink);text-decoration:none}
 .nextcs a.back:hover{color:var(--purple)}
+.nextcs .arr{flex:none;display:block}
 .nxcard{display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;align-items:center;width:100%;max-width:360px;border:1px solid var(--border);border-radius:12px;padding:10px}
 .nxph{aspect-ratio:4/3;border:1.5px dashed #cdb8ee;background:#ece3fa;border-radius:8px}
 .nxcard p{margin:0;color:var(--text-muted)}
@@ -362,7 +363,7 @@ blockquote cite{font-style:normal;font-size:14px;color:var(--text-muted)}
   <nav class="nextcs" aria-label="More work">
    <ol class="rail" aria-label="Case studies"><li aria-current="page">Amcos Store</li><li class="nx">LEMC</li><li>Vitamin D</li></ol>
    <div class="nxrow">
-    <a class="back" href="index.html#work">&larr; All work</a>
+    <a class="back" href="index.html#work"><svg class="arr" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13.5 8H2.5M6.5 3.8L2.3 8l4.2 4.2"/></svg><span>All work</span></a>
     <div class="nxcard"><div class="nxph" aria-hidden="true"></div><p><span class="lbl">Next case study</span><b>LEMC, flood response tool</b><em>In progress</em></p></div>
    </div>
   </nav>
