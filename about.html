@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>About — Attiyah</title>
+<title>About | Attiyah</title>
 <meta name="color-scheme" content="light">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2222%22%20fill%3D%22%23410f70%22/%3E%3Ctext%20x%3D%2250%22%20y%3D%2270%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2258%22%20fill%3D%22%23ffffff%22%20text-anchor%3D%22middle%22%3EA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,7 +28,8 @@
     padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
-  html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
   *, *::before, *::after { box-sizing: inherit; }
 
   body {
@@ -94,7 +95,6 @@
   footer a { color: var(--text-muted); text-decoration: none; font-size: 14px; }
   footer a:hover { color: var(--purple); }
 
-
   @media (max-width: 640px) {
     .wrap { padding: 0 20px; }
     .hero { padding: 80px 0 64px; }
@@ -104,7 +104,7 @@
 </head>
 <body>
 
-<nav>
+<nav aria-label="Main">
   <div class="wrap">
     <a class="wordmark" href="index.html">Attiyah</a>
     <ul class="navlinks">
@@ -115,14 +115,14 @@
   </div>
 </nav>
 
-<!-- ============ HERO — opening quote, same visual system as homepage ============ -->
+<!-- HERO: opening question, same visual system as the homepage -->
 <header class="hero">
   <div class="wrap">
     <h1>Each project starts the same way: what decision is someone actually making, and what happens if it's wrong?</h1>
   </div>
 </header>
 
-<!-- ============ ABOUT BODY — heading below is a placeholder, swap for whichever option you like ============ -->
+<!-- ABOUT BODY -->
 <section class="about">
   <div class="wrap">
     <p class="label">How I think</p>
@@ -133,7 +133,7 @@
   </div>
 </section>
 
-<!-- ============ FOOTER ============ -->
+<!-- FOOTER: swap in the real LinkedIn link when ready -->
 <footer>
   <div class="wrap">
     <p class="label">Let's talk</p>

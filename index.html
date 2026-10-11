@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Attiyah — Product Designer</title>
+<title>Attiyah | Product Designer</title>
 <meta name="color-scheme" content="light">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20100%20100%22%3E%3Crect%20width%3D%22100%22%20height%3D%22100%22%20rx%3D%2222%22%20fill%3D%22%23410f70%22/%3E%3Ctext%20x%3D%2250%22%20y%3D%2270%22%20font-family%3D%22Georgia%2Cserif%22%20font-size%3D%2258%22%20fill%3D%22%23ffffff%22%20text-anchor%3D%22middle%22%3EA%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,7 +13,6 @@
   :root {
     color-scheme: light;
     --purple: #410f70;
-    --purple-dark: #220b4e;
     --tint-1: #dbc8ff;
     --tint-2: #b691ff;
     --white: #ffffff;
@@ -28,9 +27,10 @@
     padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
-  html { scroll-padding-top: env(safe-area-inset-top, 0px); scroll-behavior: smooth; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
   *, *::before, *::after { box-sizing: inherit; }
-  
+
   body {
     margin: 0;
     background: var(--bg);
@@ -105,13 +105,6 @@
   }
   section { padding: 64px 0; border-top: 1px solid var(--border); }
 
-  /* About */
-  .about p {
-    max-width: 68ch;
-    font-size: 18px;
-    line-height: 1.75;
-    margin: 0 0 20px;
-  }
   /* Case study cards */
   .card {
     display: block;
@@ -159,8 +152,8 @@
     justify-content: center;
   }
   /* Honest screen treatment: real screenshot, thin border, no simulated hardware */
-  .device-phone, .device-browser { display: inline-flex; }
-  .device-phone img, .device-browser img {
+  .device-phone { display: inline-flex; }
+  .device-phone img {
     display: block;
     max-height: 360px;
     width: auto;
@@ -169,24 +162,20 @@
     border-radius: 12px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.07);
   }
-  .device-browser img { width: 100%; height: auto; object-fit: cover; object-position: top; }
   .card.pending { cursor: default; }
   .card.pending .card-title { color: var(--text-muted); }
   .card.pending .card-desc { max-width: none; }
-
 
   footer { padding: 64px 0 80px; border-top: 1px solid var(--border); }
   footer .row { display: flex; gap: 28px; flex-wrap: wrap; align-items: baseline; margin-bottom: 16px; }
   footer a { color: var(--text-muted); text-decoration: none; font-size: 14px; }
   footer a:hover { color: var(--purple); }
 
-
   @media (max-width: 780px) {
     .card { padding: 24px; }
     .card-grid, .card:nth-of-type(even) .card-grid { grid-template-columns: 1fr; gap: 24px; }
     .card-grid .frame, .card:nth-of-type(even) .card-grid .frame { order: -1 !important; }
-    .device-phone img, .device-browser img { max-height: 300px; }
-    .card-metrics { gap: 22px; }
+    .device-phone img { max-height: 300px; }
   }
 
   @media (max-width: 640px) {
@@ -198,7 +187,7 @@
 </head>
 <body>
 
-<nav>
+<nav aria-label="Main">
   <div class="wrap">
     <a class="wordmark" href="#top">Attiyah</a>
     <ul class="navlinks">
@@ -211,7 +200,7 @@
 
 <div id="top"></div>
 
-<!-- ============ HERO — edit headline text below ============ -->
+<!-- HERO: edit headline text below -->
 <header class="hero">
   <div class="wrap">
     <p class="greeting">Hi, I'm Attiyah.</p>
@@ -223,15 +212,15 @@
   </div>
 </header>
 
-<!-- ============ CASE STUDIES — AMCOS is live, others are honest placeholders ============ -->
+<!-- CASE STUDIES: Amcos Store is live, the others are placeholders -->
 <section id="work">
   <div class="wrap">
     <p class="label">Selected work</p>
 
-    <a class="card" href="#" aria-label="AMCOS Store case study">
+    <a class="card" href="amcos.html" aria-label="Amcos Store case study">
       <div class="card-grid">
         <div class="card-text">
-          <h3 class="card-title">Amcos Store</h3>
+          <h2 class="card-title">Amcos Store</h2>
           <p class="metric-primary">1 hour → under 30 seconds</p>
           <p class="card-desc">Cutting in-store purchase time for a cooperative retail system.</p>
           <div class="metric-row">
@@ -246,7 +235,7 @@
     <a class="card pending" aria-label="LEMC flood response tool, in progress">
       <div class="card-grid">
         <div class="card-text">
-          <h3 class="card-title">LEMC — flood response tool</h3>
+          <h2 class="card-title">LEMC, flood response tool</h2>
           <p class="card-desc">Case study coming soon.</p>
         </div>
         <div class="frame">In progress</div>
@@ -256,7 +245,7 @@
     <a class="card pending" aria-label="Vitamin D nutrition tool, in progress">
       <div class="card-grid">
         <div class="card-text">
-          <h3 class="card-title">Vitamin D nutrition tool</h3>
+          <h2 class="card-title">Vitamin D nutrition tool</h2>
           <p class="card-desc">Case study coming soon.</p>
         </div>
         <div class="frame">In progress</div>
@@ -265,7 +254,7 @@
   </div>
 </section>
 
-<!-- ============ FOOTER — swap in real LinkedIn + resume links when ready ============ -->
+<!-- FOOTER: swap in the real LinkedIn and resume links when ready -->
 <footer>
   <div class="wrap">
     <p class="label">Let's talk</p>
