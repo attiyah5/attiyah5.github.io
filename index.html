@@ -74,11 +74,18 @@
     font-size: clamp(24px, 3vw, 34px);
     line-height: 1.55;
     max-width: 780px;
-    margin: 0 auto 28px;
+    margin: 0 auto 16px;
     letter-spacing: -0.005em;
     color: var(--white);
   }
   .hero h1 strong { font-weight: 600; }
+  .hero .lede {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.85);
+    max-width: 600px;
+    margin: 0 auto 28px;
+  }
   .hero .role {
     font-size: 14px;
     color: rgba(255,255,255,0.75);
@@ -204,7 +211,8 @@
 <header class="hero">
   <div class="wrap">
     <p class="greeting">Hi, I'm Attiyah.</p>
-    <h1>I design for <strong>high-stakes decisions</strong> under real-world constraints, diving deep into the problem so the outcome is never a gamble.</h1>
+    <h1>With a background in microbiology, I make <strong>hidden information</strong> visible and understandable.</h1>
+    <p class="lede">I design systems that simplify complex decisions in health and ease limited access to information.</p>
     <p class="role">Product / UX Designer</p>
     <div class="hero-ctas">
       <a class="hero-btn primary" href="#work">View work</a>
@@ -221,8 +229,8 @@
       <div class="card-grid">
         <div class="card-text">
           <h2 class="card-title">Amcos Store</h2>
-          <p class="metric-primary">1 hour → under 30 seconds</p>
-          <p class="card-desc">Cutting in-store purchase time for a cooperative retail system.</p>
+          <p class="metric-primary">86 → 25 seconds</p>
+          <p class="card-desc">Cutting task time in a cooperative store app. Lecturers reported losing up to an hour per in-store visit.</p>
           <div class="metric-row">
             <div class="metric"><div class="metric-value">3 wks</div><div class="metric-label">Solo build</div></div>
             <div class="metric"><div class="metric-value">10</div><div class="metric-label">Participants</div></div>
@@ -232,20 +240,20 @@
       </div>
     </a>
 
-    <a class="card pending" aria-label="LEMC flood response tool, in progress">
+    <a class="card pending" aria-label="Vitamin D nutrition tool, in progress">
       <div class="card-grid">
         <div class="card-text">
-          <h2 class="card-title">LEMC, flood response tool</h2>
+          <h2 class="card-title">Vitamin D nutrition tool</h2>
           <p class="card-desc">Case study coming soon.</p>
         </div>
         <div class="frame">In progress</div>
       </div>
     </a>
 
-    <a class="card pending" aria-label="Vitamin D nutrition tool, in progress">
+    <a class="card pending" aria-label="Vitamin D nutrition tool, clinician view, in progress">
       <div class="card-grid">
         <div class="card-text">
-          <h2 class="card-title">Vitamin D nutrition tool</h2>
+          <h2 class="card-title">Vitamin D nutrition tool, clinician view</h2>
           <p class="card-desc">Case study coming soon.</p>
         </div>
         <div class="frame">In progress</div>

@@ -221,17 +221,14 @@ blockquote cite{font-style:normal;font-size:14px;color:var(--text-muted)}
 .rail li[aria-current]{color:var(--ink)}
 .rail li[aria-current]::before{background:var(--purple)}
 .rail li.nx::before{background:repeating-linear-gradient(90deg,#cdb8ee 0 6px,transparent 6px 10px)}
-.nxrow{display:flex;justify-content:space-between;align-items:center;gap:24px}
-.nextcs a.back{display:inline-flex;align-items:center;gap:8px;min-height:44px;font-size:15px;font-weight:500;color:var(--ink);text-decoration:none}
-.nextcs a.back:hover{color:var(--purple)}
-.nextcs .arr{flex:none;display:block}
+.nxrow{display:flex;justify-content:flex-end;align-items:center;gap:24px}
 .nxcard{display:grid;grid-template-columns:96px minmax(0,1fr);gap:14px;align-items:center;width:100%;max-width:360px;border:1px solid var(--border);border-radius:12px;padding:10px}
 .nxph{aspect-ratio:4/3;border:1.5px dashed #cdb8ee;background:#ece3fa;border-radius:8px}
 .nxcard p{margin:0;color:var(--text-muted)}
 .nxcard .lbl{display:block;font-size:12px;letter-spacing:.04em;text-transform:uppercase}
 .nxcard b{display:block;font:500 17px/1.3 var(--serif);color:var(--ink);margin-top:2px}
 .nxcard em{display:block;font-style:normal;font-size:13px;margin-top:2px}
-@media (max-width:640px){.nxrow{flex-direction:column-reverse;align-items:stretch;gap:8px}.nxcard{max-width:none}.nextcs a.back{justify-self:start}}
+@media (max-width:640px){.nxrow{display:block}.nxcard{max-width:none}}
 </style>
 </head>
 <body>
@@ -248,7 +245,7 @@ blockquote cite{font-style:normal;font-size:14px;color:var(--text-muted)}
 <section class="hero" id="cover" data-nav="Cover">
  <div class="wrap">
   <div class="copy">
-   <h1>Cutting in-store purchase time from <b>1 hour to under 30 seconds</b>.</h1>
+   <h1>Cut task time <b>by about 70%, <span style="white-space:nowrap">from 86 to 25 seconds</span></b>.</h1>
    <p class="sub"><b>Amcos Store:</b> digitizing a co-op store so lecturers can shop around their schedules.</p>
    <dl class="meta">
     <div><dt>Role</dt><dd>Product Designer (0-1)</dd></div>
@@ -273,7 +270,7 @@ blockquote cite{font-style:normal;font-size:14px;color:var(--text-muted)}
     <p>Amcos Store is a cooperative store for registered lecturer-members of Ahmadu Bello University, Zaria, Nigeria. Members buy monthly on store credit, and during university strikes the store is a financial safety net. But members couldn't check stock without visiting, and many didn't know the full range the store sold, so patronage became inconsistent.</p>
     <p>My task was to align the co-op's goals (steadier patronage, product range awareness) with the user need (clear stock status). I defined success as task efficiency: the time to find an item and check out, the action users repeat most.</p>
    </div>
-   <div class="stat"><b>9 of 10</b><p>testers found an item and checked out in under 30 seconds, down from a reported hour in-store.</p></div>
+   <div class="stat"><b>9 of 10</b><p>testers found an item and checked out in under 30 seconds, from the homepage to order confirmation.</p></div>
   </section>
   <section id="research" data-nav="Research">
    <h2 class="sr">Research</h2>
@@ -328,7 +325,7 @@ blockquote cite{font-style:normal;font-size:14px;color:var(--text-muted)}
    <h2 class="sr">Validation</h2>
    <p class="sec-label">Validation</p>
    <p class="takeaway">Average time on task fell by about 70%, from 86 seconds to 25.</p>
-   <div class="prose"><p>Ten lecturers tested the final prototype. Each chose one of three items (Bournvita, rice or tea), found it, and checked out. I measured active time on task.</p></div>
+   <div class="prose"><p>Ten lecturers tested the final prototype. Each chose one of three items (Bournvita, rice or tea), found it, and checked out. I measured active time on task, from the homepage to the order confirmation.</p></div>
    <p class="vcnt">Round 1: 5 testers. Round 2: 10 testers.</p>
    <table class="vt"><thead><tr><th>Round</th><th>Testers</th><th>Find</th><th>Checkout</th><th>Total</th></tr></thead><tbody>
     <tr><th scope="row" rowspan="2">Round 1<small>First prototype</small></th><td>3</td><td>35s</td><td>45s</td><td>1m 20s</td></tr>
@@ -338,7 +335,7 @@ blockquote cite{font-style:normal;font-size:14px;color:var(--text-muted)}
     <tr><td>1</td><td>25s</td><td>15s</td><td>40s</td></tr>
    </tbody></table>
    <div class="prose vres"><p>Lecturers reported losing up to an hour of their break to an in-store visit. In testing, 9 of 10 found their item and checked out in under 30 seconds.</p></div>
-   <div class="pair vp"><figure><img src="images/amcos-validation-order-confirmation.webp" width="710" height="1537" alt="Amcos Store order confirmation screen reading Order placed successfully, with delivery details and Track Order and Return to home buttons"><figcaption><b>Where each task ended</b>Timing stopped at the order confirmation screen.</figcaption></figure>
+   <div class="pair vp"><figure><img src="images/amcos-validation-order-confirmation.webp" width="710" height="1537" alt="Amcos Store order confirmation screen reading Order placed successfully, with delivery details and Track Order and Return to home buttons"><figcaption><b>Where each task ended</b>Timing ran from the homepage to this screen.</figcaption></figure>
    <div class="vq"><blockquote><p>This is nice, the checkout is quite straightforward.</p><cite>Participant, round 2</cite></blockquote><blockquote><p>Ehn, so this item is in stock and this is out of stock.</p><cite>Participant, round 2</cite></blockquote></div></div>
   </section>
 
@@ -361,10 +358,9 @@ blockquote cite{font-style:normal;font-size:14px;color:var(--text-muted)}
   </section>
 
   <nav class="nextcs" aria-label="More work">
-   <ol class="rail" aria-label="Case studies"><li aria-current="page">Amcos Store</li><li class="nx">LEMC</li><li>Vitamin D</li></ol>
+   <ol class="rail" aria-label="Case studies"><li aria-current="page">Amcos Store</li><li class="nx">Vitamin D</li><li class="nx">Clinician view</li></ol>
    <div class="nxrow">
-    <a class="back" href="index.html#work"><svg class="arr" width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M13.5 8H2.5M6.5 3.8L2.3 8l4.2 4.2"/></svg><span>All work</span></a>
-    <div class="nxcard"><div class="nxph" aria-hidden="true"></div><p><span class="lbl">Next case study</span><b>LEMC, flood response tool</b><em>In progress</em></p></div>
+    <div class="nxcard"><div class="nxph" aria-hidden="true"></div><p><span class="lbl">Next case study</span><b>Vitamin D nutrition tool</b><em>In progress</em></p></div>
    </div>
   </nav>
 
